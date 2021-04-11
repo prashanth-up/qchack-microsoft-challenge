@@ -22,6 +22,11 @@ namespace QCHack.Task1 {
     //
     operation Task1_DivisibleByFour (inputs : Qubit[], output : Qubit) : Unit is Adj+Ctl {
         // ...
+               
+        X(inputs[0]);
+        X(inputs[1]);
+        CCNOT(inputs[0],inputs[1], output);
+        X(inputs[1]);
+        X(inputs[0]);
     }
 }
-

@@ -23,8 +23,20 @@ namespace QCHack.Task3 {
     // Warning: some library operations, such as ApplyToEach, might count as multi-qubit gate,
     // even though they apply single-qubit gates to separate qubits. Make sure you run the test
     // on your solution to check that it passes before you submit the solution!
-    operation Task3_ValidTriangle (inputs : Qubit[], output : Qubit) : Unit is Adj+Ctl {
+    operation Task3_ValidTriangle (qs : Qubit[], output : Qubit) : Unit is Adj+Ctl {
         // ...
+                CNOT(qs[1], qs[2]);
+        CNOT(qs[0], qs[1]);
+        X(qs[1]);
+        X(qs[2]);
+        
+        CCNOT(qs[1], qs[2], output);
+        X(output);
+        
+        X(qs[2]);
+        X(qs[1]);
+        CNOT(qs[0], qs[1]);
+        CNOT(qs[1], qs[2]);
     }
 }
 

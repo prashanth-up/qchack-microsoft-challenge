@@ -1,6 +1,8 @@
 namespace QCHack.Task4 {
     open Microsoft.Quantum.Canon;
     open Microsoft.Quantum.Intrinsic;
+    open Microsoft.Quantum.Arrays;
+    open Microsoft.Quantum.Convert;
 
     // Task 4 (12 points). f(x) = 1 if the graph edge coloring is triangle-free
     // 
@@ -44,6 +46,8 @@ namespace QCHack.Task4 {
         target : Qubit
     ) : Unit is Adj+Ctl {
         // ...
+
+
+
     }
 }
-
